@@ -15,6 +15,8 @@ func main() {
 			http.NotFound(w, req)
 			return
 		}
+
+		w.Header().Set("Content-type","application/json")
 		fmt.Fprintf(w, "Welcome to the home page!")
 	})
 
