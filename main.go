@@ -17,7 +17,7 @@ func main() {
 		}
 
 		w.Header().Set("Content-type","application/json")
-		fmt.Fprintf(w, "Welcome to the home page!")
+		fmt.Fprintf(w, `{"message":"welcome to the homepage!"}`)
 	})
 
 	http.ListenAndServe(":8080", mux)
